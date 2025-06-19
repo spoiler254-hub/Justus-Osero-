@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justus Osero | Web Designer & Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        nav ul li a.active { color: var(--primary-color); }
+        section { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Justus<span>Osero</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
 
+    <!-- HERO SECTION WITH TYPING EFFECT -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1 class="slide-in">Hello, I'm Justus Osero</h1>
+        <h2 class="slide-in"><span id="typed"></span></h2>
+        <a href="#contact" class="btn primary slide-in">Hire Me</a>
+        <div class="counters slide-in">
+          <div class="counter"><span data-count="25">0</span><p>Projects</p></div>
+          <div class="counter"><span data-count="10">0</span><p>Clients</p></div>
+          <div class="counter"><span data-count="3">0</span><p>Years Experience</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/osero Justus" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_.spoiler._.254._" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/justus-osero" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title slide-in">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card slide-in">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Design</h3>
+                    <div class="progress-bar"><div class="progress" data-width="90">0%</div></div>
+                </div>
+                <div class="skill-card slide-in">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Software Engineering</h3>
+                    <div class="progress-bar"><div class="progress" data-width="85">0%</div></div>
+                </div>
+                <div class="skill-card slide-in">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Design</h3>
+                    <div class="progress-bar"><div class="progress" data-width="95">0%</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title slide-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text slide-in">
+                    <p>
+                        Hi! I'm Justus Osero, a passionate web designer and software engineer. I love building visually appealing and functional digital experiences. My journey in tech has been fueled by curiosity and a drive to solve problems creatively.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Front-end Development</li>
+                        <li><i class="fas fa-check"></i> Back-end Development</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> Technical Writing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title slide-in">Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="software">Software</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item slide-in" data-category="software">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                        <div class="overlay">
+                            <h3>Task Management App</h3>
+                            <p>A productivity application for team collaboration</p>
+                            <a href="#" class="btn primary" data-modal="1">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item slide-in" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                        <div class="overlay">
+                            <h3>Portfolio Website</h3>
+                            <p>A custom portfolio site for a photographer</p>
+                            <a href="#" class="btn primary" data-modal="2">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item slide-in" data-category="personal">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                        <div class="overlay">
+                            <h3>Creative Coding Project</h3>
+                            <p>Interactive art created with JavaScript</p>
+                            <a href="#" class="btn primary" data-modal="3">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more portfolio items as required -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO MODAL POPUP -->
+    <div id="portfolio-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- BLOG SECTION -->
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title slide-in">Blog</h2>
+            <div class="blog-list">
+                <article class="blog-post slide-in">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Blog Post 1">
+                        <div class="post-date">June 1, 2023</div>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="#">How I Built My Portfolio Website</a></h2>
+                        <p>Insights into my process for designing and developing a personal portfolio site using modern web tools...</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-tag"></i> Web Design</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <a href="#" class="btn secondary">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post slide-in">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Blog Post 2">
+                        <div class="post-date">May 28, 2023</div>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="#">Getting Started with React Hooks</a></h2>
+                        <p>A beginner-friendly guide to understanding and implementing React Hooks in your projects...</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-tag"></i> Software Engineering</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="#" class="btn secondary">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post slide-in">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Blog Post 3">
+                        <div class="post-date">April 10, 2023</div>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="#">Creative Coding: Art with JavaScript</a></h2>
+                        <p>How I use programming as a creative outlet and the tools that make it possible...</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-tag"></i> Creative Coding</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <a href="#" class="btn secondary">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title slide-in">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info slide-in">
+                    <h2>Let's Connect</h2>
+                    <p>Feel free to reach out for collaborations, freelance work, or just to say hello!</p>
+                </div>
+                <form id="contactForm" class="slide-in">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Justus Osero. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="main.js"></script>
+    <script>
+        // Typing effect
+        var typed = new Typed('#typed', {
+            strings: ['Web Designer.', 'Software Engineer.', 'Creative Coder.'],
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 2000,
+            loop: true
+        });
+    </script>
+</body>
+          </html>
