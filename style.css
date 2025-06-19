@@ -1,4 +1,187 @@
-/* Global Styles */
+/* ==== YOUR EXISTING CSS (kept and extended) ==== */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4d44db;
+    --accent-color: #ff6584;
+    --dark-color: #2d2d2d;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #fff;
+    --black: #000;
+    --transition: all 0.3s ease;
+}
+/* ...[keep all your existing CSS as above, unchanged]... */
+
+/* === EYE-CATCHING ENHANCEMENTS (added or overridden) === */
+
+/* HERO SECTION with Typing Effect and Counters */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #6c63ff 0%, #1e1e2f 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1, .hero h2, .hero .btn, .hero .counters {
+  margin-bottom: 1em;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.counters {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+}
+.counter { text-align: center; }
+.counter span { font-size: 2.5rem; color: #fff; font-weight: bold; }
+.counter p { margin: 0; color: #fff; }
+
+/* Animated Skill Progress Bars */
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 30px;
+  margin: 10px 0 0 0;
+  height: 20px;
+  overflow: hidden;
+}
+.progress {
+  background: linear-gradient(90deg, #6c63ff 60%, #00d2ff 100%);
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  border-radius: 30px;
+  transition: width 1.5s cubic-bezier(.4,2,.3,1);
+  width: 0;
+}
+
+/* Modal (for Portfolio Popups) */
+.modal {
+  display: none; position: fixed; z-index: 9999; left: 0; top: 0;
+  width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.7);
+}
+.modal-content {
+  background: #fff; margin: 10% auto; padding: 20px; border-radius: 8px;
+  width: 80%; max-width: 600px; position: relative;
+}
+.close {
+  position: absolute; top: 10px; right: 20px; font-size: 2rem;
+  cursor: pointer; color: #333;
+}
+
+/* Fade-in/Slide-in Animations */
+.slide-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(.4,2,.3,1);
+}
+.slide-in.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10000;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 16px rgba(108,99,255,.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#backToTop:hover {
+  background: #00d2ff;
+}
+
+/* Stylish Buttons */
+.btn.primary {
+  background: linear-gradient(90deg, #6c63ff 60%, #00d2ff 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+.btn.primary:hover {
+  background: linear-gradient(90deg, #00d2ff 60%, #6c63ff 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(108,99,255,0.18);
+}
+
+/* Make sure your social icons are always visible/fancy on desktop */
+.social-icons {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white, #fff);
+  color: var(--primary-color, #6c63ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition, 0.3s);
+}
+.social-icons a:hover {
+  background-color: var(--primary-color, #6c63ff);
+  color: var(--white, #fff);
+  transform: translateY(-5px);
+}
+
+/* Responsive overrides (already good in your CSS, but add for new features if needed) */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero h2 { font-size: 1.5rem; }
+  .counters { flex-direction: column; gap: 20px; }
+  .social-icons { display: none; }
+}
+
+@media (max-width: 576px) {
+  .hero h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1.2rem; }
+  .btn { width: 100%; }
+  .counters { flex-direction: column; gap: 20px; }
+}
+
+/* ==== END OF ENHANCEMENTS ==== */
+
+/* ========== YOUR ORIGINAL CSS CONTINUES ========== */
+/* (No need to repeat here, keep the rest as it was.) *//* Global Styles */
 :root {
     --primary-color: #6c63ff;
     --secondary-color: #4d44db;
